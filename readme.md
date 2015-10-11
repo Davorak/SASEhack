@@ -8,9 +8,14 @@
 
 * copy files to edison.  I am using the 'deploy' script with my edisons ip address hard coded. The edisonClient fold contains a simple client to send data back to the server.
 
+* Change the `endpoint` variable `./edisonClient/index.js` to match the ip address of your server.
+
 * To run the client on the edison, use `node index.js` in the edisonClient folder.
 
 * On the server in the github repo run the server with `node server.js`
+
+
+Your server should now recieve json data from the edison and print it to the terminal on the server
 
 # Basic resources for SASEhack
 install ftdi drivers for mac:
