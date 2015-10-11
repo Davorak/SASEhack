@@ -1,4 +1,5 @@
 var express = require('express');
+var fs = require('fs');
 
 var bodyParser = require('body-parser');
 var app = express();
@@ -8,6 +9,13 @@ app.use(bodyParser());
 
 app.get('/', function (req, res) {
   res.send('Hello World!');
+});
+
+app.get('/test', function (req, res) {
+  fs.readFile('./index.html','utf-8', function(err, data) {
+    console.log(data);
+    res.send(data);
+  });
 });
 
 app.post('/joystick', function (req, res) {
