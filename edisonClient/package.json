@@ -1,0 +1,16 @@
+{
+  "name": "edisonClient",
+  "version": "0.0.0",
+  "description": "Simple client to gather info from ports and post it to server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Patrick Wheeler",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^2.10.2",
+    "mraa": "^0.8.0",
+    "request": "^2.64.0"
+  }
+}
