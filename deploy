@@ -1,2 +1,2 @@
 
-scp -r ./client root@192.168.3.145:/home/root/code/.
+scp -r ./edisonClient root@192.168.3.145:/home/root/code/.
