@@ -14,6 +14,11 @@
 
 * On the server in the github repo run the server with `node server.js`
 
+* For the live stream test example on the page 'localhost:3000/test' you must allso:
+    * cd to browserClient
+    * `npm i`
+    * `npm start` and keep that program running in the terminal.
+
 
 Your server should now recieve json data from the edison and print it to the terminal on the server
 
