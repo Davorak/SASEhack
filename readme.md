@@ -22,13 +22,27 @@
 
 Your server should now recieve json data from the edison and print it to the terminal on the server
 
+# Known issues
+
+* The request library works most of the time, hoever it will often crash the node process:
+
+```
+net.js:708
+  var state = self._writableState;
+                  ^
+TypeError: Cannot read property '_writableState' of undefined
+    at Object.afterWrite (net.js:708:19)
+```
+
+A work around is to install 
+[forever](https://www.npmjs.com/package/forever) with `npm i forever -f` and start the edisonClient with `forever index.js`. This will restart the process when the request library crashes the process.
+
 # Basic resources for SASEhack
 install ftdi drivers for mac:
 https://learn.sparkfun.com/tutorials/how-to-install-ftdi-drivers/mac
 
 flashing firmware:
 https://software.intel.com/en-us/flashing-the-firmware-on-intel-edison-board
-
 
 oled board from spark fun
 https://learn.sparkfun.com/tutorials/sparkfun-blocks-for-intel-edison---oled-block-?_ga=1.56361506.862938157.1444523880

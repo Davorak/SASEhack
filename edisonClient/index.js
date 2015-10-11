@@ -49,6 +49,7 @@ var readOledInputs = function() {
   };
 };
 
+/* The mraa examples used steTimeout to recurse
 setInterval(function() {
   var data = readOledInputs();
   console.log(data);
@@ -56,4 +57,16 @@ setInterval(function() {
     console.log(res[1]);
   });
 }, 1000);
+*/
 
+// copy outline at https://github.com/intel-iot-devkit/mraa/blob/338feb2c3e83584c24dc2b27cce7bb20240e367c/examples/javascript/Blink-IO.js
+var periodicActivity = function() {
+  var data = readOledInputs();
+  console.log(data);
+  request.postAsync(endpoint + '/joystick', {form: data}).then(function(res){
+    console.log(res[1]);
+  });
+  setTimeout(periodicActivity, 1000);
+};
+
+periodicActivity();
