@@ -66,7 +66,7 @@ var periodicActivity = function() {
   request.postAsync(endpoint + '/joystick', {form: data}).then(function(res){
     console.log(res[1]);
   });
-  setTimeout(periodicActivity, 1000);
+  setTimeout(periodicActivity, 100);
 };
 
 periodicActivity();
