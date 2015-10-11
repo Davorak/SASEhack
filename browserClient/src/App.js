@@ -27,6 +27,13 @@ class Counter extends Component {
   }
 }
 
+require('socket.io/lib/client.js')
+
+var socket = io('http://localhost:3000');
+socket.on('test', function (data) {
+  console.log(data);
+});
+
 export class App extends Component {
   render() {
     return (
